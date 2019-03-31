@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CalendarModule } from 'modules/calendar.module';
-import {DateAdapter } from 'date-adapters/date-adapter';
-import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { CalendarModule } from '../modules/calendar.module';
+import {DateAdapter } from '../date-adapters/date-adapter';
+import { adapterFactory } from '../date-adapters/date-fns';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory
-    })    
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
